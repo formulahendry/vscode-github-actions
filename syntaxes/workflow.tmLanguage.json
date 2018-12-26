@@ -1,0 +1,44 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "GitHub Workflow",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.workflow",
+				"match": "#.*"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "support.class.workflow",
+				"match": "\\b(action|workflow)\\b"
+			},{
+				"name": "support.variable.control.workflow",
+				"match": "\\b(on|resolves|needs|uses|runs|args|env|secrets)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.workflow",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.workflow",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.workflow"
+}

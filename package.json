@@ -1,15 +1,33 @@
 {
     "name": "github-actions",
     "displayName": "GitHub Actions",
-    "description": "GitHub Actions",
+    "description": "Language support for workflow file of GitHub Actions",
     "version": "0.0.1",
     "publisher": "formulahendry",
+    "icon": "logo.png",
     "engines": {
-        "vscode": "^1.30.0"
+        "vscode": "^1.28.0"
     },
     "categories": [
-        "Other"
+        "Programming Languages",
+        "Snippets"
     ],
+    "keywords": [
+        "GitHub",
+        "Actions",
+        "DevOps",
+        "CI",
+        "CD"
+    ],
+    "bugs": {
+        "url": "https://github.com/formulahendry/vscode-github-actions/issues",
+        "email": "formulahendry@gmail.com"
+    },
+    "homepage": "https://github.com/formulahendry/vscode-github-actions/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/formulahendry/vscode-github-actions.git"
+    },
     "activationEvents": [
         "onCommand:extension.sayHello"
     ],
@@ -19,6 +37,31 @@
             {
                 "command": "extension.sayHello",
                 "title": "Hello World"
+            }
+        ],
+        "languages": [
+            {
+                "id": "workflow",
+                "aliases": [
+                    "GitHub Workflow"
+                ],
+                "extensions": [
+                    ".workflow"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "workflow",
+                "scopeName": "source.workflow",
+                "path": "./syntaxes/workflow.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "workflow",
+                "path": "./snippets/snippets.json"
             }
         ]
     },

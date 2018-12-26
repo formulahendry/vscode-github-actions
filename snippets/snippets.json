@@ -1,0 +1,24 @@
+{
+    "workflow": {
+        "prefix": "workflow",
+        "body": [
+            "workflow \"${1:IDENTIFIER}\" {",
+            "  on = \"${2:EVENT}\"",
+            "  resolves = [\"${3:ACTION1}\", \"${4:ACTION2}\"]",
+            "}"
+        ],
+        "description": "workflow"
+    },
+    "action": {
+        "prefix": "action",
+        "body": [
+            "action \"${1:IDENTIFIER}\" {",
+            "  needs = \"${2:ACTION}\"",
+            "  uses = \"${3}\"",
+            "  args = \"${4}\"",
+            "}"
+        ],
+        "description": "action"
+    }
+
+}
