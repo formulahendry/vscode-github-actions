@@ -29,16 +29,9 @@
         "url": "https://github.com/formulahendry/vscode-github-actions.git"
     },
     "activationEvents": [
-        "onCommand:extension.sayHello"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ],
         "languages": [
             {
                 "id": "workflow",
